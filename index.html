@@ -16,15 +16,32 @@
             keep doing
         </nav>
         <main>
-            this is freshman in charge
-            hello
-            i am making my first project
+<input type="file" id="fileUpload">
+<button type="submit">업로드</button>
+            <script>
+            // 파일 업로드 입력 요소를 가져옵니다.
+const fileInput = document.getElementById("file-upload");
 
-            ㄹㅇ남러ㅣㅏㅇㅁ너ㅏ리ㅓㅇㅁ나ㅣㅓㄹ아ㅣㅇㄴ머ㅏㅣㅇ러
-            ㄹ엄나ㅓ라ㅣㄴㅇ머아리ㅓㅁㄴ이
-            ㄹ아ㅓㄴ머ㅏ이 씨바러ㅏㅣㅓ비ㅓ러리ㅏㅁ넝
-            ㄹㅇ머나ㅣㅓㄱ다ㅣ더ㅏ두절아
-            ㅑㄹ저니러나ㅓㄷ팀 ㅁ ㄹ 야머ㅏㅣ렂ㅁ담아망해
+// 파일 업로드 이벤트 핸들러를 추가합니다.
+fileInput.addEventListener("change", (event) => {
+  // 업로드된 파일을 가져옵니다.
+  const file = event.target.files[0];
+
+  // 파일 리더 객체를 만듭니다.
+  const reader = new FileReader();
+
+  // 파일을 읽고 결과를 텍스트에 저장합니다.
+  reader.onload = (event) => {
+    const text = event.target.result;
+
+    // 텍스트를 콘솔에 출력합니다.
+    console.log(text);
+  };
+
+  // 파일을 읽습니다.
+  reader.readAsText(file);
+});
+            </script>
 
         </main>
         <footer>
